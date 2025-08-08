@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Animation Left & Right</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      width: 100%;
+      background-color: #1B1212;
+      overflow: auto;
+    }
+
+    .navbar a {
+      float: left;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #000;
+    }
+
+    .active {
+      background-color: #1B1212;
+    }
+
+    @media screen and (max-width: 900px) {
+      .navbar a {
+        float: none;
+        display: block;
+      }
+    }
+
+    /* Buttons */
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      padding: 10px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 0 4px;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .btn.active {
+      background-color: #666;
+      color: white;
+    }
+
+    /* Image container */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+      justify-content: center;
+    }
+
+    .row img {
+      margin: 8px;
+      vertical-align: middle;
+      width: 20%;
+      flex: 1 1 auto;
+      max-width: 50%;
+      opacity: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .row img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Animation keyframes */
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Animation classes */
+    .slide-left img {
+      animation: slideInLeft 0.7s forwards;
+    }
+
+    .slide-right img {
+      animation: slideInRight 0.7s forwards;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="search 2.html"><i class="fa fa-fw fa-search"></i> Search</a> 
+  <a href="menu.html"><i class="fa fa-fw fa-bars"></i> Menu</a> 
+  <a href="gallery.html"><i class="fa fa-fw fa-photo"></i> Gallery</a>
+  <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+  <a href="location.html"><i class="fa fa-fw fa-map"></i> Location</a>
+  <a href="instagram.html"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  <a href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+</div>
+
+
+<!-- Image rows -->
+<div class="row slide-left"> 
+  <img src="h.png" alt="Image 1">
+  <img src="HOTEL.png" alt="Image 2">
+  <img src="t.png" alt="Image 3">
+</div>
+
+<div class="row slide-left"> 
+  <img src="h.png" alt="Image 1">
+  <img src="HOTEL.png" alt="Image 2">
+  <img src="t.png" alt="Image 3">
+</div>
+
+<div class="row slide-right"> 
+  <img src="h.png" alt="Image 4">
+  <img src="HOTEL.png" alt="Image 5">
+  <img src="t.png" alt="Image 6">
+</div>
+
+<!-- Scripts -->
+<script>
+  // Layout change functions
+  function one() {
+    const imgs = document.querySelectorAll(".row img");
+    imgs.forEach(img => {
+      img.style.flex = "100%";
+      img.style.width = "100%";
+    });
+  }
+
+  function two() {
+    const imgs = document.querySelectorAll(".row img");
+    imgs.forEach(img => {
+      img.style.flex = "50%";
+      img.style.width = "50%";
+    });
+  }
+
+  function four() {
+    const imgs = document.querySelectorAll(".row img");
+    imgs.forEach(img => {
+      img.style.flex = "25%";
+      img.style.width = "25%";
+    });
+  }
+
+  // Active button styling
+  const header = document.getElementById("myHeader");
+  const btns = header.getElementsByClassName("btn");
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      const current = header.querySelector(".btn.active");
+      if (current) current.classList.remove("active");
+      this.classList.add("active");
+    });
+  }
+
+  // Stagger animation delay
+  window.onload = () => {
+    const stagger = (selector) => {
+      const images = document.querySelectorAll(selector);
+      images.forEach((img, index) => {
+        img.style.animationDelay = `${index * 0.2}s`;
+      });
+    };
+    stagger(".slide-left img");
+    stagger(".slide-right img");
+  };
+</script>
+
+</body>
+</html>

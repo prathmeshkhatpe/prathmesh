@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Raireshwar Garden</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin: 10px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hotel Raireshwar Garden</h1>
+    <p>Welcome to your serene getaway in Bhor, Maharashtra</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>Nestled in the lush landscapes of Bhor, Hotel Raireshwar Garden offers a peaceful retreat for nature lovers and trekkers. Located close to the historic Raireshwar Temple, our hotel combines comfort with cultural richness.</p>
+    </section>
+
+    <section>
+      <h2>Nearby Attractions</h2>
+      <ul>
+        <li>Raireshwar Temple – Historic site of Chhatrapati Shivaji Maharaj’s oath</li>
+        <li>Kenjalgad Fort – Scenic trekking destination</li>
+        <li>Gomukh and Aswal Lakes – Perfect for nature walks</li>
+        <li>Pandav Leni – Ancient Buddhist caves</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <!-- You can replace the src with actual image URLs -->
+        <img src="https://via.placeholder.com/400x300" alt="Hotel View">
+        <img src="https://via.placeholder.com/400x300" alt="Raireshwar Temple">
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <p>For reservations and inquiries, reach out on Instagram: <a href="https://www.instagram.com/hotel_raireshwar_garden" target="_blank">@hotel_raireshwar_garden</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hotel Raireshwar Garden. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Hotel Raireshwar Garden</title>
+</head>
+<body>
+  <!-- Navbar -->
+  
+    <div class="nav-links" id="nav-links">
+      <a href="HOTEL RAYRESHWAR.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="search.html"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="menu.html"><i class="fa fa-fw fa-cutlery"></i> Menu</a>
+      <a href="gallery.html"><i class="fa fa-fw fa-photo"></i> Gallery</a>
+      <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a href="location.html"><i class="fa fa-fw fa-map"></i> Location</a>
+      <a href="instagram.html" class="active"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      <a href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+    </div>
+  </nav>
+  <div class="main-content container">
+    <header style="text-align:center; margin-bottom: 32px;">
+      <h1 style="font-size:2.5rem; margin-bottom: 0.5em;">Hotel Raireshwar Garden</h1>
+      <p style="font-size:1.2rem; color:#d4af37;">Welcome to your serene getaway in Bhor, Maharashtra</p>
+    </header>
+    <main>
+      <section style="margin-bottom: 32px;">
+        <h2 style="color:#d4af37;">About Us</h2>
+        <p>Nestled in the lush landscapes of Bhor, Hotel Raireshwar Garden offers a peaceful retreat for nature lovers and trekkers. Located close to the historic Raireshwar Temple, our hotel combines comfort with cultural richness.</p>
+      </section>
+      <section style="margin-bottom: 32px;">
+        <h2 style="color:#d4af37;">Nearby Attractions</h2>
+        <ul style="list-style: disc inside; margin-left: 1em;">
+          <li>Raireshwar Temple – Historic site of Chhatrapati Shivaji Maharaj’s oath</li>
+          <li>Kenjalgad Fort – Scenic trekking destination</li>
+          <li>Gomukh and Aswal Lakes – Perfect for nature walks</li>
+          <li>Pandav Leni – Ancient Buddhist caves</li>
+        </ul>
+      </section>
+      <section style="margin-bottom: 32px;">
+        <h2 style="color:#d4af37;">Gallery</h2>
+        <div class="gallery" style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">
+          <img src="m.png" alt="Hotel View" style="width:220px;height:150px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+          <img src="r.png" alt="Raireshwar Fort" style="width:220px;height:150px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+        </div>
+      </section>
+      <section style="margin-bottom: 32px;">
+        <h2 style="color:#d4af37;">Contact Us</h2>
+        <p>For reservations and inquiries, reach out on Instagram: <a href="https://www.instagram.com/hotel_raireshwar_garden" target="_blank" style="color:#d4af37;">@hotel_raireshwar_garden</a></p>
+      </section>
+    </main>
+    <footer style="text-align:center; margin-top: 40px; color: #aaa;">
+      <p>&copy; 2025 Hotel Raireshwar Garden. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if(menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('show');
+        });
+      });
+    }
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if(navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

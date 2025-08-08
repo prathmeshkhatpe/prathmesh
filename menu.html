@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color:#1B1212;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #1B1212;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+<body>
+
+<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="search 2.html"><i class="fa fa-fw fa-search"></i> Search</a> 
+  <a href="menu.html"><i class="fa fa-fw fa-search"></i> Menu</a> 
+  <a href="gallery.html"><i class="fa fa-fw fa-photo"></i> Gallery</a>
+  <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+  <a href="location.html"><i class="fa fa-fw fa-map"></i> Location</a>
+  <a href="instagram.html"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  <a href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+</div>
+<style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#d4af37;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ccc;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background: ##363532;
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #ccc;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ffffff;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body style="background-color:white;">
+
+<div class="navbar">
+
+<div class="dropdown">
+  <button class="dropbtn"><i class="fa fa-fw fa-coffee"></i> Tea <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <div class="header">
+      <h2>TEA MENU</h2>
+    </div>
+    <div class="row">
+
+      <!-- Classic Teas -->
+      <div class="column">
+        <h3>CLASSIC TEAS</h3>
+        <a href="#">Masala Chai</a>
+        <a href="#">Ginger Tea</a>
+        <a href="#">Cardamom Tea</a>
+        <a href="#">Elaichi Chai</a>
+        <a href="#">Black Tea</a>
+        <a href="#">Milk Tea</a>
+      </div>
+
+      <!-- Flavored Teas -->
+      <div class="column">
+        <h3>FLAVORED TEAS</h3>
+        <a href="#">Lemon Tea</a>
+        <a href="#">Tulsi Tea</a>
+        <a href="#">Peppermint Tea</a>
+        <a href="#">Jasmine Tea</a>
+        <a href="#">Saffron Tea</a>
+        <a href="#">Rose Tea</a>
+      </div>
+
+      <!-- Health / Herbal Teas -->
+      <div class="column">
+        <h3>HERBAL & SPECIAL</h3>
+        <a href="#">Green Tea</a>
+        <a href="#">Chamomile Tea</a>
+        <a href="#">Detox Tea</a>
+        <a href="#">Kahwa</a>
+        <a href="#">Ashwagandha Tea</a>
+        <a href="#">Hibiscus Tea</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="dropdown">
+  <button class="dropbtn"><i class="fa fa-fw fa-coffee"></i> Coffee <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <div class="header">
+      <h2>COFFEE MENU</h2>
+    </div>
+    <div class="row">
+
+      <!-- Hot Coffees -->
+      <div class="column">
+        <h3>HOT COFFEE</h3>
+        <a href="#">Espresso</a>
+        <a href="#">Americano</a>
+        <a href="#">Cappuccino</a>
+        <a href="#">Latte</a>
+        <a href="#">Filter Coffee</a>
+        <a href="#">Mocha</a>
+      </div>
+
+      <!-- Cold Coffees -->
+      <div class="column">
+        <h3>COLD COFFEE</h3>
+        <a href="#">Iced Coffee</a>
+        <a href="#">Cold Brew</a>
+        <a href="#">Frappe</a>
+        <a href="#">Mocha Shake</a>
+        <a href="#">Affogato</a>
+        <a href="#">Vanilla Iced Latte</a>
+      </div>
+
+      <!-- Specialty Coffees -->
+      <div class="column">
+        <h3>SPECIALTY</h3>
+        <a href="#">Caramel Macchiato</a>
+        <a href="#">Irish Coffee</a>
+        <a href="#">Turkish Coffee</a>
+        <a href="#">Vietnamese Coffee</a>
+        <a href="#">Dalgona Coffee</a>
+        <a href="#">Hazelnut Latte</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="dropdown">
+  <button class="dropbtn"><i class="fa fa-fw fa-glass"></i> Juice <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <div class="header">
+      <h2>JUICE MENU</h2>
+    </div>
+    <div class="row">
+      
+      <!-- Fruit Juices -->
+      <div class="column">
+        <h3>FRUIT JUICES</h3>
+        <a href="#">Orange Juice</a>
+        <a href="#">Apple Juice</a>
+        <a href="#">Watermelon Juice</a>
+        <a href="#">Grape Juice</a>
+        <a href="#">Pineapple Juice</a>
+        <a href="#">Mosambi Juice</a>
+      </div>
+
+      <!-- Milkshakes -->
+      <div class="column">
+        <h3>MILKSHAKES</h3>
+        <a href="#">Chocolate Shake</a>
+        <a href="#">Strawberry Shake</a>
+        <a href="#">Vanilla Shake</a>
+        <a href="#">Mango Shake</a>
+        <a href="#">Banana Shake</a>
+        <a href="#">Oreo Shake</a>
+      </div>
+
+      <!-- Specialty Juices -->
+      <div class="column">
+        <h3>SPECIALTY JUICES</h3>
+        <a href="#">Detox Green Juice</a>
+        <a href="#">Beetroot-Carrot Juice</a>
+        <a href="#">Amla Juice</a>
+        <a href="#">Lemon Mint Cooler</a>
+        <a href="#">Sugarcane Juice</a>
+        <a href="#">Coconut Water</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="dropdown">
+  <button class="dropbtn"><i class="fa fa-fw fa-tint"></i> Soup <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <div class="header">
+      <h2>SOUP MENU</h2>
+    </div>
+    <div class="row">
+      
+      <!-- Veg Soups -->
+      <div class="column">
+        <h3>VEG SOUPS</h3>
+        <a href="#">Tomato Soup</a>
+        <a href="#">Sweet Corn Soup</a>
+        <a href="#">Manchow Soup</a>
+        <a href="#">Hot & Sour Veg Soup</a>
+        <a href="#">Mushroom Soup</a>
+        <a href="#">Spinach Soup</a>
+      </div>
+
+      <!-- Non-Veg Soups -->
+        <div class="column" style="background-image: url('your-image.jpg'); background-size: cover; background-position: center; color: white; width: 300px; height: 400px; padding: 20px;">
+        <h3>NON-VEG SOUPS</h3>
+        <a href="#">Chicken Clear Soup</a>
+        <a href="#">Hot & Sour Chicken Soup</a>
+        <a href="#">Chicken Manchow Soup</a>
+        <a href="#">Mutton Bone Soup</a>
+        <a href="#">Seafood Soup</a>
+        <a href="#">Egg Drop Soup</a>
+      </div>
+
+      <!-- Specialty Soups -->
+      <div class="column">
+        <h3>SPECIALTY SOUPS</h3>
+        <a href="#">Thai Tom Yum Soup</a>
+        <a href="#">Lemon Coriander Soup</a>
+        <a href="#">Cream of Broccoli</a>
+        <a href="#">Talumein Soup</a>
+        <a href="#">Minestrone Soup</a>
+        <a href="#">Laksa Soup</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="dropdown">
+  <button class="dropbtn"><i class="fa fa-fw fa-cutlery"></i> Snacks <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <div class="header">
+      <h2>SNACKS MENU</h2>
+    </div>
+    <div class="row">
+      
+      <!-- Street Snacks -->
+      <div class="column">
+        <h3>STREET SNACKS</h3>
+        <a href="#">Samosa</a>
+        <a href="#">Pani Puri</a>
+        <a href="#">Dabeli</a>
+        <a href="#">Vada Pav</a>
+        <a href="#">Sev Puri</a>
+        <a href="#">Kachori</a>
+      </div>
+
+      <!-- Quick Bites -->
+      <div class="column">
+        <h3>QUICK BITES</h3>
+        <a href="#">French Fries</a>
+        <a href="#">Cheese Balls</a>
+        <a href="#">Sandwiches</a>
+        <a href="#">Puff Pastry</a>
+        <a href="#">Nachos</a>
+        <a href="#">Veg Cutlet</a>
+      </div>
+
+      <!-- South Indian Snacks -->
+      <div class="column">
+        <h3>SOUTH INDIAN</h3>
+        <a href="#">Idli</a>
+        <a href="#">Medu Vada</a>
+        <a href="#">Upma</a>
+        <a href="#">Mini Dosa</a>
+        <a href="#">Bonda</a>
+        <a href="#">Appam</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn"><i class="fa fa-fw fa-fire"></i> Starters <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <div class="header">
+      <h2>STARTERS</h2>
+    </div>
+    <div class="row">
+      
+      <!-- Veg Starters -->
+      <div class="column">
+        <h3>VEG STARTERS</h3>
+        <a href="#">Veg Manchurian</a>
+        <a href="#">Spring Rolls</a>
+        <a href="#">Paneer Tikka</a>
+        <a href="#">Crispy Corn</a>
+        <a href="#">Chilli Paneer</a>
+        <a href="#">Hara Bhara Kabab</a>
+      </div>
+
+      <!-- Non-Veg Starters -->
+      <div class="column">
+        <h3>NON-VEG STARTERS</h3>
+        <a href="#">Chicken Lollipop</a>
+        <a href="#">Chilli Chicken</a>
+        <a href="#">Chicken 65</a>
+        <a href="#">Chicken Manchurian</a>
+        <a href="#">Mutton Seekh Kabab</a>
+        <a href="#">Prawn Tempura</a>
+      </div>
+
+      <!-- Grilled / Tandoori -->
+      <div class="column">
+        <h3>GRILLED / TANDOORI</h3>
+        <a href="#">Tandoori Chicken</a>
+        <a href="#">Fish Tikka</a>
+        <a href="#">Paneer Grill</a>
+        <a href="#">Mutton Grill</a>
+        <a href="#">Chicken Tikka</a>
+        <a href="#">Tandoori Mushroom</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn"><i class="fa fa-fw fa-leaf"></i> Veg <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-content">
+    <div class="header">
+      <h2>VEG MENU</h2>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h3>PANEER</h3>
+        <a href="#">Paneer Butter Masala</a>
+        <a href="#">Palak Paneer</a>
+        <a href="#">Paneer Tikka</a>
+        <a href="#">Kadai Paneer</a>
+        <a href="#">Paneer Bhurji</a>
+      </div>
+      <div class="column">
+        <h3>VEGETABLES</h3>
+        <a href="#">Mix Veg Curry</a>
+        <a href="#">Aloo Gobi</a>
+        <a href="#">Baingan Bharta</a>
+        <a href="#">Stuffed Capsicum</a>
+        <a href="#">Veg Kofta</a>
+      </div>
+      <div class="column">
+        <h3>DAL / CURRY</h3>
+        <a href="#">Dal Makhani</a>
+        <a href="#">Dal Tadka</a>
+        <a href="#">Chana Masala</a>
+        <a href="#">Rajma Curry</a>
+        <a href="#">Kadhi Pakora</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-fw fa-cutlery"></i> Non-veg
+     </i><i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>MENU CARD</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>MUTTON</h3>
+          <a>Mutton thali</a>
+          <a>Mutton masala</a>
+          <a>Mutton kabab</a>
+          <a>Mutton grevy</a>
+          <a>Mutton biryani</a>
+          <a>Mutton grill</a>
+          <a>Mutton fry</a>
+          <a>Mutton curry</a>
+<a>Mutton thali</a>
+          <a>Mutton masala</a>
+<a>Mutton thali</a>
+          <a>Mutton masala</a>
+        </div>
+        <div class="column">
+          <h3>CHICKEN</h3>
+          <a>Chicken thali</a>
+          <a>Chicken masala</a>
+<a>Chicken fry</a>
+          <a>Chicken biryani</a>
+
+         
+        </div>
+        <div class="column">
+          <h3>FISH</h3>
+          <a href="https://www.bing.com/images/search?view=detailV2&ccid=Kn4wigV0&id=2D6FB710D416E7CB8ACA717CF37542A732707AA0&thid=OIP.Kn4wigV0swo8pDzYeMDAvwHaFH&mediaurl=https%3a%2f%2f1.bp.blogspot.com%2f-dmr7TvaMJ7c%2fWRyLh1RZjlI%2fAAAAAAAAIF4%2fuPHo3WFtctE8ZS34-s0mkRyNRkU-2-SzgCLcB%2fs1600%2f0000000000000000000000A%252B%2525281%252529.jpg&exph=1067&expw=1544&q=Fish+fry&simid=608008976141589230&FORM=IRPRST&ck=154F1913C7E0D92857DBE8903FBF598A&selectedIndex=0&itb=0">Fish fry</a>
+          <a href="https://www.bing.com/images/search?view=detailV2&ccid=WfUXLo8D&id=4477932B904B0888A6CE78FF8F90F4211C024807&thid=OIP.WfUXLo8DaHhrp5B-pBNYPgHaE7&mediaurl=https%3a%2f%2fvaya.in%2frecipes%2fwp-content%2fuploads%2f2018%2f04%2fKerala-Fish-Curry.jpg&exph=533&expw=800&q=Fish+curry&simid=608022870346837844&FORM=IRPRST&ck=4C1966C509ACE402E93F37188522B45B&selectedIndex=0&itb=0">Fish curry</a>
+          <a href="#">Fish masala</a>
+<a href="https://www.bing.com/images/search?view=detailV2&ccid=nhcyQqQ2&id=42D820F5258DED92269B26A493BB1A9E6C5ADD4F&thid=OIP.nhcyQqQ2DofbWqDUvzdMowHaHa&mediaurl=https%3a%2f%2fwww.licious.in%2fblog%2fwp-content%2fuploads%2f2020%2f12%2fTandoori-Fish-750x750.jpg&exph=750&expw=750&q=Fish+tandoori&simid=608031632069367093&FORM=IRPRST&ck=C9981AF8EDF511E56E91A512DD5D2E40&selectedIndex=2&itb=0">Fish tandoori</a>
+<a href="https://www.bing.com/images/search?view=detailV2&ccid=5r9Vj562&id=C91B029EAE814E3489D76EC70E66363FB93C3B07&thid=OIP.5r9Vj562tfMUXalx8AjkawHaLH&mediaurl=https%3a%2f%2fwww.greedygourmet.com%2fwp-content%2fuploads%2f2020%2f03%2fFishkorma.jpg&exph=1200&expw=800&q=Fish+korma&simid=608035351526929510&FORM=IRPRST&ck=E5CE2207C1CED92E9262F95F1C51080A&selectedIndex=0&itb=0">Fish korma</a>
+<a href="https://www.bing.com/images/search?view=detailV2&ccid=ChhdosMG&id=1119CD5D1A6C9E77A5C4CFDAA3FA806DB756BF03&thid=OIP.ChhdosMGzbQhODuKqjHaVAHaHa&mediaurl=https%3a%2f%2fbombayrestaurantac.com%2fwp-content%2fuploads%2f2023%2f02%2fbangali-Fish-masala.jpg&exph=800&expw=800&q=%3ebangali+Fish+masala&simid=608016715656806733&FORM=IRPRST&ck=B4BF0D2678E7455CF1D929E011194E8A&selectedIndex=1&itb=0">bangali Fish masala</a>
+<a href="https://www.bing.com/images/search?view=detailV2&ccid=AaAIWzY9&id=FC633405F0C58AD8EC2272DD107588A5AE2CA4E6&thid=OIP.AaAIWzY9_-nCiOD35VQJDwHaE6&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.01a0085b363dffe9c288e0f7e554090f%3frik%3d5qQsrqWIdRDdcg%26riu%3dhttp%253a%252f%252fwww.recipesaresimple.com%252fwp-content%252fuploads%252f2014%252f03%252fmeen-pollichathu-recipe.jpg%26ehk%3d2JgigoIhF%252f49UfC9eIELguDVjEv5VLQM25z5tl%252bVIc0%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=664&expw=1000&q=meen+Fish&simid=608015989816320119&FORM=IRPRST&ck=2AB5219764A6F16E7B5C0DCBB8476BE9&selectedIndex=1&itb=0"> meen Fish </a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<div style="padding:16px">
+  
+</div>
+
+</body>
+</html>

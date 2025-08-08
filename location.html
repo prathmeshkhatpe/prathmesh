@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Rayreshwar - Location</title>
+
+  <!-- FontAwesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1B1212;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      z-index: 1000;
+    }
+
+    .navbar.scrolled {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
+      object-fit: contain;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #d4af37;
+      color: #181818;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 56px;
+        right: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        padding: 12px 16px;
+        width: 180px;
+        z-index: 9999;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        color: #1B1212;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        background-color: #d4af37;
+        color: #181818;
+      }
+    }
+
+    /* Location Button Styles */
+    .location-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 80px; /* offset for fixed navbar */
+      text-align: center;
+    }
+
+    .location-container h1 {
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    .button-link {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .button-link:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      margin: 40px 0 20px 0;
+      color: #888;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="HOTEL RAYRESHWAR.html" class="logo">
+      <img src="logo.png" alt="Hotel Rayreshwar Logo" class="logo-img" />
+      <span class="logo-text">Rayreshwar</span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="HOTEL RAYRESHWAR.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="search.html"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="menu.html"><i class="fa fa-fw fa-cutlery"></i> Menu</a>
+      <a href="gallery.html"><i class="fa fa-fw fa-photo"></i> Gallery</a>
+      <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a href="location.html" class="active"><i class="fa fa-fw fa-map"></i> Location</a>
+      <a href="instagram.html"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      <a href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="location-container">
+    <h1>Find Us on Google Maps</h1>
+    <a
+      class="button-link"
+      href="https://www.google.com/maps/search/hotel+raireshwar+bhor/@18.1166195,73.7075222,13z?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+      target="_blank"
+      role="button"
+      aria-label="Open Hotel Rayreshwar location in Google Maps"
+    >
+      LOCATION
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>&copy; 2025 Hotel Rayreshwar. All rights reserved.</footer>
+
+  <!-- JavaScript -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle &&
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

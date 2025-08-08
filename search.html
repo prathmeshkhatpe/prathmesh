@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Rayreshwar</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary-color: #1e40af;
+      --secondary-color: #065f46;
+      --accent-color: #9d174d;
+      --text-color: #1f2937;
+      --medium-gray: #e5e7eb;
+      --light-gray: #f9fafb;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background-color: #fff;
+    }
+
+    nav.navbar {
+      width: 100%;
+      box-shadow: var(--shadow);
+      background-color: white;
+      z-index: 999;
+      position: sticky;
+      top: 0;
+    }
+
+    nav.navbar.secondary {
+      background-color: var(--light-gray);
+      border-top: 1px solid var(--medium-gray);
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      flex-wrap: wrap;
+    }
+
+    /* Center the bottom navbar container's content */
+    nav.navbar.secondary .navbar-container {
+      justify-content: center;
+    }
+
+    .navbar-logo {
+      font-weight: 800;
+      font-size: 1.8rem;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+    }
+
+    .navbar-menu {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar-menu li {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-menu li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+
+    .navbar-menu li a:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    .book-btn {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 2px 8px rgba(157, 23, 77, 0.3);
+    }
+
+    .book-btn:hover {
+      background-color: #7a113b;
+      box-shadow: 0 4px 12px rgba(157, 23, 77, 0.4);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      flex-direction: column;
+    }
+
+    .search-and-book {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .main-search-form {
+      display: flex;
+      align-items: center;
+      border: 2px solid var(--primary-color);
+      border-radius: 30px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+      padding: 4px;
+      gap: 4px;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+
+    .main-search-form input[type="text"] {
+      flex: 1;
+      padding: 12px 18px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      min-width: 220px;
+    }
+
+    .main-search-form button {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 20px;
+    }
+
+    .main-search-form button:hover {
+      background: #14318f;
+    }
+
+    .book-btn-inline {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(157, 23, 77, 0.2);
+      transition: background 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .book-btn-inline:hover {
+      background-color: #7a113b;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+      }
+
+      .navbar-menu li a,
+      .book-btn {
+        width: 100%;
+        display: block;
+      }
+
+      .search-and-book {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 100%;
+      }
+
+      .main-search-form {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .main-search-form input[type="text"],
+      .main-search-form button,
+      .book-btn-inline {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .book-btn-inline {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-logo">Hotel Rayreshwar</a>
+        <ul class="navbar-menu" aria-label="Main navigation">
+          <li><a href="#"><i class="fa fa-fw fa-home"></i> Home</a></li>
+          <li><a href="search.html"><i class="fa fa-fw fa-search"></i> Search</a></li>
+          <li><a href="menu.html"><i class="fa fa-fw fa-cutlery"></i> Menu</a></li>
+          <li><a href="gallery.html"><i class="fa fa-fw fa-photo"></i> Gallery</a></li>
+          <li><a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a></li>
+          <li><a href="location.html"><i class="fa fa-fw fa-map"></i> Location</a></li>
+          <li><a href="instagram.html"><i class="fa fa-fw fa-instagram"></i> Instagram</a></li>
+          <li><a href="about.html"><i class="fa fa-fw fa-users"></i> About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Bottom Navigation -->
+  <nav class="navbar secondary">
+    <div class="navbar-container">
+      <ul class="navbar-menu" aria-label="Secondary navigation">
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="spa.html">Spa</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="search-and-book">
+      <form class="main-search-form" action="search.html" method="get">
+        <input type="text" name="q" placeholder="Search for rooms, dining, amenities..." required />
+        <button type="submit"><i class="fa fa-search"></i></button>
+        <a href="book.html" class="book-btn-inline">Book Now</a>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px; background-color: var(--light-gray); border-top: 1px solid var(--medium-gray);">
+    <p>&copy; 2025 Hotel Rayreshwar. All rights reserved.</p>
+  </footer>
+</body>
+</html>

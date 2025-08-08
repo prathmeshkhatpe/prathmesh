@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Rayreshwar</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Meta for SEO -->
+  <meta name="description" content="Experience royalty at Hotel Rayreshwar. Premium food, luxury ambiance, and heritage-inspired hospitality.">
+  <meta name="keywords" content="Hotel Rayreshwar, Rayreshwar Nandgaon, luxury hotel, traditional food, Maharashtrian cuisine">
+
+  <!-- Styles -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #1B1212;
+      overflow: auto;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      padding: 5px 20px;
+    }
+
+    .navbar.scrolled {
+      background-color: rgba(0,0,0,0.9);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      padding: 0 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(255,255,255,0.3);
+      transition: all 0.3s;
+    }
+
+    .nav-links {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      padding: 15px 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 10px;
+      left: 50%;
+      background-color: #d4af37;
+      transition: all 0.3s;
+      transform: translateX(-50%);
+    }
+
+    .nav-links a:hover::after,
+    .active::after {
+      width: 70%;
+    }
+
+    .active {
+      color: #d4af37 !important;
+      font-weight: 400 !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      color: white;
+      font-size: 24px;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slider-wrapper::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+      z-index: 1;
+    }
+
+    .slider-track {
+      display: flex;
+      width: calc(100vw * 8);
+      height: 100vh;
+      animation: slideLeft 40s linear infinite;
+    }
+
+    .slider-track img {
+      width: 500px;
+      height: 100vh;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    @keyframes slideLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-100vw * 4)); }
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 2;
+      animation: fadeInUp 2s ease-out forwards;
+      pointer-events: none;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .hero-text h1 {
+      font-size: 70px;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-shadow: 0 0 20px rgba(0,0,0,0.8);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 22px;
+      margin: 15px 0 25px 0;
+      font-weight: 300;
+    }
+
+    .hero-text a.button-link {
+      padding: 14px 32px;
+      font-size: 16px;
+      border: none;
+      background-color: #d4af37;
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: all 0.3s ease;
+      display: inline-block;
+      border-radius: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .hero-text a.button-link:hover {
+      background-color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translate(-50%, -60%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 1024px) {
+      .hero-text h1 { font-size: 50px; }
+      .hero-text p { font-size: 18px; }
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar {
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+      .logo {
+        margin-right: 0;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        display: none;
+      }
+      .nav-links.show { display: flex; }
+      .nav-links a {
+        padding: 10px;
+        font-size: 14px;
+      }
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+      }
+      .hero-text h1 { font-size: 36px; }
+      .hero-text p { font-size: 16px; }
+      .hero-text a.button-link {
+        font-size: 14px;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loading Spinner -->
+  <div id="loader" style="position:fixed;top:0;left:0;width:100%;height:100%;background:black;z-index:9999;display:flex;align-items:center;justify-content:center;">
+    <i class="fa fa-spinner fa-spin" style="font-size:36px;color:#d4af37;"></i>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">
+      <img src="logo.png" alt="Hotel Rayreshwar Logo" class="logo-img">
+      <span class="logo-text">Rayreshwar</span>
+    </a>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="search.html"><i class="fa fa-fw fa-search"></i> Search</a>
+      <a href="menu.html"><i class="fa fa-fw fa-cutlery"></i> Menu</a>
+      <a href="gallery.html"><i class="fa fa-fw fa-photo"></i> Gallery</a>
+      <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a href="location.html"><i class="fa fa-fw fa-map"></i> Location</a>
+      <a href="instagram.html"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+      <a href="about.html"><i class="fa fa-fw fa-users"></i> About</a>
+    </div>
+  </nav>
+
+  <!-- Slider -->
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <img src="HOTEL.png" alt="Hotel Image 1" />
+      <img src="h.png" alt="Hotel Image 2" />
+      <img src="n.png" alt="Hotel Image 3" />
+      <img src="t.png" alt="Hotel Image 4" />
+      <img src="HOTEL.png" alt="Hotel Image 1" />
+      <img src="h.png" alt="Hotel Image 2" />
+      <img src="n.png" alt="Hotel Image 3" />
+      <img src="t.png" alt="Hotel Image 4" />
+    </div>
+    <div class="hero-text">
+      <h1>HOTEL RAYRESHWAR</h1>
+      <p>If you are hungry, Then I am here</p>
+      <a class="button-link" href="https://www.google.com/maps/search/hotel+raireshwar+bhor/@18.1166195,73.7075222,13z?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D">VISIT NOW</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Loader
+    window.onload = () => document.getElementById('loader').style.display = 'none';
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

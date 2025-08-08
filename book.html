@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Now - Hotel Rayreshwar</title>
+  <style>
+    :root {
+      --primary-color: #1e40af;
+      --secondary-color: #065f46;
+      --accent-color: #9d174d;
+      --text-color: #1f2937;
+      --light-gray: #f9fafb;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+      --font-family: 'Inter', sans-serif;
+    }
+
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background: var(--light-gray);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar same as before */
+    .navbar {
+      background: white;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .navbar-logo {
+      font-weight: 800;
+      font-size: 1.8rem;
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .navbar-menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin: 0;
+    }
+
+    .navbar-menu li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: var(--transition);
+      user-select: none;
+      display: block;
+    }
+
+    .navbar-menu li a.active,
+    .navbar-menu li a:hover {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .book-btn {
+      background: var(--accent-color);
+      color: white !important;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(157, 23, 77, 0.4);
+      transition: var(--transition);
+    }
+    .book-btn:hover {
+      background: #7b1047;
+      box-shadow: 0 6px 12px rgba(157, 23, 77, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive hamburger menu styles omitted for brevity here */
+
+    /* Page container */
+    .booking-container {
+      max-width: 600px;
+      background: white;
+      margin: 40px auto 80px auto;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .booking-container h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: var(--text-color);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 1rem;
+      border: 2px solid #d1d5db;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="date"]:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 6px var(--primary-color);
+    }
+
+    /* Submit button */
+    .submit-btn {
+      background: var(--accent-color);
+      color: white;
+      font-weight: 700;
+      padding: 15px 0;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .submit-btn:hover {
+      background: #7b1047;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .booking-container {
+        margin: 20px 15px 60px 15px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">Hotel Rayreshwar</a>
+
+      <ul class="navbar-menu">
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="spa.html">Spa</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="#" class="book-btn active">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="booking-container">
+      <h1>Book Your Stay</h1>
+      <form action="#" method="POST">
+        <div>
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required />
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required />
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" required />
+        </div>
+        <div>
+          <label for="checkin">Check-in Date</label>
+          <input type="date" id="checkin" name="checkin" required />
+        </div>
+        <div>
+          <label for="checkout">Check-out Date</label>
+          <input type="date" id="checkout" name="checkout" required />
+        </div>
+        <div>
+          <label for="roomtype">Room Type</label>
+          <select id="roomtype" name="roomtype" required>
+            <option value="" disabled selected>Select a room</option>
+            <option value="standard">Standard Room</option>
+            <option value="deluxe">Deluxe Room</option>
+            <option value="suite">Suite</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Confirm Booking</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

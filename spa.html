@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Rayreshwar - Spa</title>
+  <style>
+    :root {
+      --primary-color: #1e40af;
+      --secondary-color: #065f46;
+      --accent-color: #9d174d;
+      --text-color: #1f2937;
+      --light-gray: #f3f4f6;
+      --medium-gray: #e5e7eb;
+      --dark-gray: #6b7280;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f9fafb;
+      color: var(--text-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--dark-gray);
+    }
+
+    nav {
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: 600;
+      color: var(--dark-gray);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: var(--transition);
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 5px;
+    }
+
+    /* Spa Section */
+
+    .spa-section {
+      padding: 60px 20px;
+      background: var(--light-gray);
+      width: 100%;
+      max-width: 1200px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .spa-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .spa-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .spa-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .spa-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .spa-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spa-title {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .spa-description {
+      font-size: 0.95rem;
+      color: var(--dark-gray);
+      margin-bottom: 15px;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .spa-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .badge {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      user-select: none;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+    }
+  </style>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <h1>Hotel Rayreshwar</h1>
+    <p>Rejuvenate your body and mind with our exclusive spa treatments</p>
+  </header>
+
+  <nav>
+    <a href="rooms.html">Rooms</a>
+    <a href="dining.html">Dining</a>
+    <a href="#" class="active">Spa</a>
+    <a href="location.html">Location</a>
+  </nav>
+
+  <section class="spa-section" aria-label="Spa section">
+    <h2 class="section-title">Our Spa Treatments</h2>
+
+    <div class="spa-grid">
+      <article class="spa-card">
+        <img
+          src="https://source.unsplash.com/400x250/?massage,spa"
+          alt="Deep Tissue Massage"
+          class="spa-image"
+        />
+        <div class="spa-content">
+          <h3 class="spa-title">Deep Tissue Massage</h3>
+          <p class="spa-description">
+            Relieve muscle tension and improve circulation with our expert
+            deep tissue massage therapy.
+          </p>
+          <div class="spa-meta">
+            <span class="badge">60 mins</span>
+            <span class="badge">Relaxation</span>
+            <span class="badge">Therapy</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="spa-card">
+        <img
+          src="https://source.unsplash.com/400x250/?facial,skincare"
+          alt="Signature Facial"
+          class="spa-image"
+        />
+        <div class="spa-content">
+          <h3 class="spa-title">Signature Facial</h3>
+          <p class="spa-description">
+            Rejuvenate your skin with our signature facial featuring natural
+            ingredients.
+          </p>
+          <div class="spa-meta">
+            <span class="badge">45 mins</span>
+            <span class="badge">Skincare</span>
+            <span class="badge">Natural</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="spa-card">
+        <img
+          src="https://source.unsplash.com/400x250/?sauna,relax"
+          alt="Detox Sauna"
+          class="spa-image"
+        />
+        <div class="spa-content">
+          <h3 class="spa-title">Detox Sauna</h3>
+          <p class="spa-description">
+            Detoxify your body and relax in our state-of-the-art sauna room.
+          </p>
+          <div class="spa-meta">
+            <span class="badge">30 mins</span>
+            <span class="badge">Detox</span>
+            <span class="badge">Relaxation</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</body>
+</html>

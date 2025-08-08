@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hotel Rayreshwar - Dining</title>
+    <style>
+        :root {
+            --primary-color: #1e40af;  /* Deep blue */
+            --secondary-color: #065f46;  /* Emerald green */
+            --accent-color: #9d174d;  /* Deep pink */
+            --text-color: #1f2937;
+            --light-gray: #f3f4f6;
+            --medium-gray: #e5e7eb;
+            --dark-gray: #6b7280;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9fafb;
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+        }
+
+        nav {
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        /* Dining Section */
+
+        .dining-section {
+            padding: 60px 20px;
+            background: #f3f4f6;
+            width: 100%;
+            max-width: 1200px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .dining-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .dining-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dining-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dining-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .dining-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dining-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .dining-description {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .dining-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .badge {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            user-select: none;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Hotel Rayreshwar</h1>
+        <p>Discover luxury accommodations with world-class amenities and impeccable service</p>
+    </header>
+
+    <nav>
+        <a href="rooms.html">Rooms</a>
+        <a href="#" class="active">Dining</a>
+        <a href="spa.html">Spa</a>
+        <a href="location.html">Location</a>
+    </nav>
+
+    <section class="dining-section" aria-label="Dining section">
+        <h2 class="section-title">Exquisite Dining Experiences</h2>
+
+        <div class="dining-grid">
+            <article class="dining-card">
+                <img src="https://source.unsplash.com/400x250/?restaurant,fine-dining" alt="Seaside Grill Restaurant" class="dining-image" />
+                <div class="dining-content">
+                    <h3 class="dining-title">Seaside Grill Restaurant</h3>
+                    <p class="dining-description">Enjoy oceanfront dining with fresh seafood, gourmet meals, and live music in a relaxing, open-air environment.</p>
+                    <div class="dining-meta">
+                        <span class="badge">Sea View</span>
+                        <span class="badge">Seafood</span>
+                        <span class="badge">Live Music</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="dining-card">
+                <img src="https://source.unsplash.com/400x250/?cafe,breakfast" alt="The Orchid Café" class="dining-image" />
+                <div class="dining-content">
+                    <h3 class="dining-title">The Orchid Café</h3>
+                    <p class="dining-description">A cozy café offering a variety of healthy breakfast options, vegan dishes, and artisan coffees in a lush indoor garden.</p>
+                    <div class="dining-meta">
+                        <span class="badge">Vegan Options</span>
+                        <span class="badge">Breakfast</span>
+                        <span class="badge">Coffee</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="dining-card">
+                <img src="https://source.unsplash.com/400x250/?buffet,luxury" alt="Royal Feast Buffet" class="dining-image" />
+                <div class="dining-content">
+                    <h3 class="dining-title">Royal Feast Buffet</h3>
+                    <p class="dining-description">Indulge in an all-you-can-eat buffet featuring global cuisines, live cooking stations, and an extravagant dessert bar.</p>
+                    <div class="dining-meta">
+                        <span class="badge">Buffet</span>
+                        <span class="badge">Live Cooking</span>
+                        <span class="badge">Desserts</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

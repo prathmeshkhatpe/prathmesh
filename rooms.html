@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Hotel Rayreshwar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Inherit the same CSS from your current site (colors, fonts, buttons, layout) */
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #6b7280;
+            font-size: 1rem;
+        }
+
+        .room-listing {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .room-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .room-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .room-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .room-title {
+            font-size: 1.3rem;
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .room-description {
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .room-amenities {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        .room-amenities li {
+            font-size: 0.9rem;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+
+        .room-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #065f46;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1e40af;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #1a3a8f;
+        }
+
+        @media (max-width: 768px) {
+            .room-listing {
+                grid-template-columns: 1fr;
+            }
+
+            .room-image {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Our Rooms</h1>
+            <p>Choose from a selection of elegantly designed rooms tailored for comfort and luxury.</p>
+        </div>
+
+        <div class="room-listing">
+            <!-- Room 1 -->
+            <div class="room-card">
+                <img src="C:\Users\Admin\Downloads\room.jpg alt="Deluxe Room" class="download.webp">
+                <div class="room-content">
+                    <div class="room-title">Deluxe Ocean View Room</div>
+                    <p class="room-description">
+                        Enjoy the stunning sea view from your balcony in our Deluxe Room, featuring a king bed and modern decor.
+                    </p>
+                    <ul class="room-amenities">
+                        <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                        <li><i class="fas fa-tv"></i> Smart TV</li>
+                        <li><i class="fas fa-bath"></i> Ensuite Bathroom</li>
+                        <li><i class="fas fa-mug-hot"></i> Complimentary Breakfast</li>
+                    </ul>
+                    <div class="room-price">$220 / night</div>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="room-card">
+                <img src="https://source.unsplash.com/600x400/?hotel,suite" alt="Executive Suite" class="room-image">
+                <div class="room-content">
+                    <div class="room-title">Executive Suite</div>
+                    <p class="room-description">
+                        Spacious and luxurious suite with a private living area, personal concierge, and breathtaking views.
+                    </p>
+                    <ul class="room-amenities">
+                        <li><i class="fas fa-concierge-bell"></i> Butler Service</li>
+                        <li><i class="fas fa-door-open"></i> Private Balcony</li>
+                        <li><i class="fas fa-couch"></i> Living Area</li>
+                        <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                    </ul>
+                    <div class="room-price">$350 / night</div>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Add more room cards as needed -->
+        </div>
+    </div>
+
+</body>
+</html>
